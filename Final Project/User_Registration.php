@@ -5,39 +5,17 @@
 	
 <html>
   <head>
-   		<script type="text/javascript">
-              
-            var hasError = false;
+  <script>
+      var hasError = false;
              function get(id)
              {
                  return document.getElementById(id);
              }
-             function validate()
-             {
-                refresh(); 
-               if(get("name").value == "")    //name validation
-                 {
-                     hasError = true;
-                     get("err_name").innerHTML="**Name Required";
-                 }
-
-              else if(get("name").value.indexOf(' ') && get("name").value.length >=8)
-                {
-                    hasError = true;
-                    get("err_name").innerHTML="**Space Required";
-                }
-
-          
-               }    
-                    
-             function refresh()
-             {
-                 hasError = false;
-                get("err_name").innerHTML="";
-             }
-   
-   </script>
-  
+			 
+			 
+	</script>		 
+			 
+			 
 			 
 			 
 	<title>Registration</title>

@@ -54,6 +54,12 @@
 	 $pname="";
 	 $err_pname="";
 	 
+	 $cost="";
+     $err_cost="";
+     
+	 $method="";
+     $err_method="";
+	 
      $err_db="";
      $hasError = false;
 	 
@@ -1332,8 +1338,141 @@ else if(isset($_POST["User_event"]))
             }
           
                      
-     }
-     
+      }
+	  
+         elseif(isset($_POST["payment"]))
+	  {
+		 
+		
+		//------------------------------------------------------------
+		  
+	   if(empty($_POST["name"])){
+            $err_name="Name Required";
+            $hasError=true;
+            }
+            else{
+            $name=$_POST["name"];
+            }
+			
+		 //------------------------------------------------------------
+		  
+		   if(empty($_POST["email"])){
+                  
+                $err_email="Email Required ";
+                 $hasError = true;
+                 }
+                
+               else if(strpos($_POST["email"],"@"))
+               {
+                 if(strpos($_POST["email"],"."))
+                 {
+                  $email=$_POST["email"];
+                }
+                else{
+                     $err_email="Not accepted";
+                     $hasError = true;
+                }
+               }
+              
+                else if(strpos($_POST["email"],"."))
+               {
+                 if(strpos($_POST["email"],"."))
+                 {
+                   $err_email="use .(dot) after @";
+                   $hasError = true;
+                 }
+                 
+               }
+               
+               else{
+                   $err_email="Invalid email";  
+                   $hasError = true;
+                }
+		//------------------------------------------------------------
+		
+	
+		  if(empty($_POST["num"])){
+				$err_num="Phone Number Required";
+				$hasError = true;
+			}
+
+			    elseif(!is_numeric($_POST["num"]) && !empty($_POST["num"]))
+                {
+                $err_num=" Phone Number Required";
+				$hasError = true;
+                }
+
+				elseif(is_numeric($_POST["num"]))
+			{
+				$num=$_POST["num"]; 
+				
+            }    
+			  
+		
+		//------------------------------------------------------------
+	
+		
+		  if(empty($_POST["date"]))   
+     	{
+			$err_date="Date required";
+			$hasError = true;
+		}
+
+		else  
+	    {
+			$date=$_POST["date"];
+		}
+		
+		//------------------------------------------------------------
+		
+		if(empty($_POST["cost"]))    
+     	{
+			$err_cost="Balance required";
+			$hasError = true;
+		}
+
+       elseif(is_numeric($_POST["cost"]) && !empty($_POST["cost"]))
+		{
+			$cost=$_POST["cost"];
+		}
+         elseif(!is_numeric($_POST["cost"]))
+		 {
+			$err_cost="Invalid";
+			$hasError = true;
+		 }
+		
+		
+
+//--------------------------------------------------
+
+
+
+			
+			if(empty($_POST["method"])){
+			$err_method="Method Required";
+			$hasError=true;
+		    }
+		else{
+			$method=$_POST["method"];
+		    }
+
+
+
+                     if(!$hasError){
+			$rs = insertBalance($name,$email,$num,$date,$cost,$method);
+			if($rs === true){
+				header("Location: User_Dashboard.php");
+				
+			}
+			$err_db = "Database error";
+			}
+		  
+		  
+	  }
+
+
+
+
 			
 	    
 	  
@@ -1375,6 +1514,11 @@ else if(isset($_POST["User_event"]))
 		return execute($query);	
 		
 		}
+		
+		 function insertBalance($name,$email,$num,$date,$cost,$method){
+        $query  = "insert into payment_table values (NULL,'$name','$email','$num','$date','$cost','$method')";
+        return execute($query);   
+        }
 	   
 	   
 	   
@@ -1396,7 +1540,7 @@ else if(isset($_POST["User_event"]))
 		
         }
 		
-		function insertcontact($name,$email,$message){                           //User signup
+		function insertcontact($name,$email,$message){                           //User Contact
 		$query  = "insert into usercontact values (NULL,'$name','$email','$message')";
 		return execute($query);	
 		}
@@ -1417,6 +1561,11 @@ else if(isset($_POST["User_event"]))
        
         }
 		
+		function getHistory(){                  
+        $query = "select * from booking_photographer";
+        $rs = get($query);
+        return $rs;
+        }
 	
 
 		

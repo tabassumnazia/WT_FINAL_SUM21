@@ -11,7 +11,7 @@
         color:black;
 		  text-align:center;
 		  font-family: ageo;
-          font-size: 16px;
+          font-size: 15px;
 		  color:white;
 		  
 	  }
@@ -21,10 +21,10 @@
 	
 	background-color:#838E6C;
 	color:white;
-	padding-left:20px;
-	padding-right:20px;
-	padding-top:10px;
-	padding-bottom:10px;
+	padding-left:11px;
+	padding-right:11px;
+	padding-top:7px;
+	padding-bottom:7px;
 	border-radius:2px;
 	font-family:ageo;
 	font-size: 15px;
@@ -39,13 +39,15 @@
 	<br><br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      <div>
-	     <a href="Home.php"class=btn-link>Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	     <a href="Login.php"class=btn-link>Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="User_Dashboard.php"class=btn-link>Dashboard</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="Search.php"class=btn-link>Search Package</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		    <a href="user_manageprofile.php"class=btn-link>My Profile</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="User_Rating.php"class=btn-link>Rating Form</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="User_Booking_request.php"class=btn-link>Booking Form</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			 <a href="Booking_Histroy.php"class=btn-link>Booking Histroy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href=""class=btn-link>Log out</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 <a href="User_Contact.php"class=btn-link>Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 <a href="User_Payment.php"class=btn-link>Payment</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="Login.php"class=btn-link>Log out</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	</div>	    
          
