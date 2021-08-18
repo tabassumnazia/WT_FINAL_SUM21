@@ -722,10 +722,10 @@
       $rs = authenticateUser($email);
 
          if($rs)
-             {
+             {          //***********Session & Cookie******************************
           session_start();
           $_SESSION["profile"] = $rs;
-		  setcookie("loggedUser",$email,time()+70);
+		  setcookie("loggedUser",$email,time()+70); 
 
 
            header("Location: User_Dashboard.php");

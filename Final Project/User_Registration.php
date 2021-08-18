@@ -21,6 +21,16 @@
 	<title>Registration</title>
   </head>
   <body>
+  
+     
+	     <form method="Post"action=""style="
+   background: rgb(0,0,0,0.4);;
+   width: 40%;
+   margin: 150px auto;
+  padding: 20px 0;
+   border-radius: 15px;
+    box-shadow: 5px 5px 8px gray;
+          ">
                  <form action="" method="post" enctype="multipart/form-data">
                 	  <table align="center">
                              <tr>
